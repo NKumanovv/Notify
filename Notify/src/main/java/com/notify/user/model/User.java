@@ -42,8 +42,8 @@ public class User {
     @Column(nullable = false)
     private UserRole role;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    private ArrayList<Note> notes = new ArrayList<>();
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
+    private List<Note> notes = new ArrayList<>();
 
     @Column(nullable = false)
     private LocalDateTime createdOn;
