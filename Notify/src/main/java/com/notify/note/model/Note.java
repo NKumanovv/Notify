@@ -1,5 +1,6 @@
 package com.notify.note.model;
 
+import com.notify.user.model.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,6 +24,9 @@ public class Note {
     private String title;
 
     private String content;
+
+    @ManyToOne
+    private User user;
 
     @Column
     private LocalDateTime createdOn;

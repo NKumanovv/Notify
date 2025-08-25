@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form class="form" th:action="@{/login}" th:method="POST" th:object="${loginRequest}">
+
+    <h3>Login Here</h3>
+
+    <label for="email">Email</label>
+    <input type="text" placeholder="email" id="email" th:field="*{email}" required>
+    <p class="alert-warning" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password" th:field="*{password}" required>
+    <p class="alert-warning" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+
+
+    <button type="submit">Log In</button>
+
+    <p class="form-already">Don't have an account? <a href="/register">Register now</a>!</p>
+
+</form>
+
+</body>
+</html>
