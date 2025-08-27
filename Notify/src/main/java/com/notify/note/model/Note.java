@@ -11,9 +11,9 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Note {
 

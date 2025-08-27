@@ -10,9 +10,9 @@
 
     <h3>Login Here</h3>
 
-    <label for="email">Email</label>
-    <input type="text" placeholder="email" id="email" th:field="*{email}" required>
-    <p class="alert-warning" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+    <label for="username">Username</label>
+    <input type="text" placeholder="username" id="username" th:field="*{username}" required>
+    <p class="alert-warning" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
 
     <label for="password">Password</label>
     <input type="password" placeholder="Password" id="password" th:field="*{password}" required>
